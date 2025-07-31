@@ -127,7 +127,7 @@ logo:        db '.                        ', 13, 10
              db '   | |\  |    | |_| |___) |', 13, 10
              db '   |_| \_|     \___/|____/', 13, 10, 0
 
-os_info:     db 'OS: NaOS Simple File System', 0
+os_info:     db 'FS: Cirno Fumo File System', 0
 version_info: db 'Version: 1.0 (July 2025)', 0
 cpu_info:    db 'CPU: x86 Compatible', 0
 gpu_info:    db 'GPU: VGA Compatible', 0 
