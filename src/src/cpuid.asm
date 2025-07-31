@@ -6,7 +6,7 @@ start:
     int 0x10
 
     xor eax,eax
-    db 0x0F,0xA2           ; CPUID
+    db 0x0F,0xA2           
     mov [vendor],ebx
     mov [vendor+4],edx
     mov [vendor+8],ecx
@@ -15,7 +15,7 @@ start:
     call print_string
 
     mov eax,1
-    db 0x0F,0xA2           ; CPUID
+    db 0x0F,0xA2           
     test edx,1
     jz .fpu0
     mov si,fpu1
