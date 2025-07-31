@@ -29,7 +29,7 @@ To build the OS:
 Make sure you have **GCC**(optional) and **NASM** installed in your development environment before building.
 
 ## Changelog
-= p-a 1.0f
+# p-a 1.0f
 1. CPU Vendor Display Fix:  
  - Added a proper concatenation of the static label "CPU Vendor: " and the dynamically read vendor string from CPUID to display on the same line.  
 
