@@ -14,7 +14,7 @@ When the OS boots up, it launches the `boot` program. This acts both as a **user
 
 Upon startup:
 - The system waits for user input.
-- Pressing `Tab` will display a list of all available files.
+- entering `tab` in prompt will display a list of all available files.
 - Typing the name of a file **without** the `.bin` extension will **execute** that binary and perform the assigned action.
 
 ## Building the OS
@@ -26,4 +26,4 @@ To build the OS:
 
 ### Requirements
 
-Make sure you have **GCC** and **NASM** installed in your development environment before building.
+Make sure you have **GCC**(optional) and **NASM** installed in your development environment before building.
