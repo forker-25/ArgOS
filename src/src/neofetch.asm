@@ -2,137 +2,140 @@
 [bits 16]
 
 start:
-    mov ax, 0x0003
+    mov ax,0x0003
     int 0x10
-    
-    mov ah, 0x02
-    mov bh, 0
-    mov dx, 0x0202
-    int 0x10
-    
-    mov si, logo
-    call print_colored
-    
-    mov si, os_info
+
+    mov si,logo
     call print_line
-    
-    mov si, version_info  
+
+    mov si,os_info
     call print_line
-    
-    mov si, cpu_info
+    mov si,version_info
     call print_line
-    
-    mov si, gpu_info
+
+    call cpuid_read
+    mov si,vendor_str
+    call print_string
+    mov si,vendor
     call print_line
-    
-    mov si, memory_info
+
+    call get_memory_info
+    mov si,base_mem_label
+    call print_string
+    mov ax,[base_memory]
+    call print_number
+    mov si,kb_suffix
     call print_line
-    
-    mov si, colors_header
+
+    mov si,ext_mem_label
+    call print_string
+    mov ax,[extended_memory]
+    call print_number
+    mov si,kb_suffix
+    call print_line
+
+    mov si,colors_header
     call print_line
     call show_colors
-    
-    mov si, press_key
+
+    mov si,press_key
     call print_line
-    
-    mov ah, 0
+    mov ah,0
     int 0x16
-    
     ret
 
-print_colored:
-    pusha
-    mov bl, 0x0A  
+cpuid_read:
+    xor eax,eax
+    db 0x0F,0xA2
+    mov [vendor],ebx
+    mov [vendor+4],edx
+    mov [vendor+8],ecx
+    mov byte [vendor+12],0
+    ret
+
+get_memory_info:
+    int 0x12
+    mov [base_memory],ax
+    mov ah,0x88
+    int 0x15
+    mov [extended_memory],ax
+    ret
+
+print_string:
+    mov ah,0x0E
 .loop:
     lodsb
-    test al, al
+    test al,al
     jz .done
-    mov ah, 0x0e
     int 0x10
     jmp .loop
 .done:
-    call newline
-    popa
     ret
 
 print_line:
-    pusha
-    mov bl, 0x07  
-.loop:
-    lodsb
-    test al, al
-    jz .done
-    mov ah, 0x0e
+    call print_string
+    mov al,13
+    mov ah,0x0E
     int 0x10
-    jmp .loop
-.done:
-    call newline
-    popa
+    mov al,10
+    int 0x10
+    ret
+
+print_number:
+    mov bx,10
+    xor cx,cx
+.next:
+    xor dx,dx
+    div bx
+    add dl,'0'
+    push dx
+    inc cx
+    cmp ax,0
+    jne .next
+.print:
+    pop dx
+    mov ah,0x0E
+    mov al,dl
+    int 0x10
+    dec cx
+    jnz .print
     ret
 
 show_colors:
-    pusha
-    mov cx, 16    
-    mov bl, 0     
-    
-.color_loop:
-    push cx
-    push bx
-    
-    mov al, bl
-    add al, '0'
-    cmp al, '9'
-    jle .print_digit
-    add al, 7     
-.print_digit:
-    mov ah, 0x0e
+    mov cx,16
+    mov ah,0x0E
+    mov bh,0
+    xor bl,bl
+.loopc:
+    mov al,bl
+    add al,'0'
+    cmp al,'9'
+    jle .pd
+    add al,7
+.pd:
     int 0x10
-    
-    mov cx, 3
-.space_loop:
-    mov al, ' '
-    mov ah, 0x09
+    mov ah,0x09
+    mov al,' '
     int 0x10
-    loop .space_loop
-    
-    mov al, ' '
-    mov ah, 0x0e
-    mov bl, 0x07
+    mov ah,0x0E
+    mov al,' '
     int 0x10
-    
-    pop bx
-    pop cx
     inc bl
-    loop .color_loop
-    
-    call newline
-    call newline
-    popa
+    loop .loopc
     ret
 
-newline:
-    pusha
-    mov al, 13
-    mov ah, 0x0e
-    int 0x10
-    mov al, 10
-    int 0x10
-    popa
-    ret
+logo          db 'NaOS Boot',0
+os_info       db 'FS: Cirno Fumo File System',0
+version_info  db 'Version: 1.0 (July 2025)',0
+vendor_str    db 'CPU Vendor: ',0
+vendor        times 13 db 0
+base_mem_label db 'Base Memory: ',0
+ext_mem_label  db 'Extended Memory: ',0
+kb_suffix     db ' KB',0
+colors_header db 'Available Colors:',0
+press_key     db 'Press any key...',0
 
-logo:        db '.                        ', 13, 10
-             db '    _   _       ___  ____', 13, 10
-             db '   | \ | |     / _ \/ ___|', 13, 10  
-             db '   |  \| |    | | | \___ \', 13, 10
-             db '   | |\  |    | |_| |___) |', 13, 10
-             db '   |_| \_|     \___/|____/', 13, 10, 0
-
-os_info:     db 'FS: Cirno Fumo File System', 0
-version_info: db 'Version: 1.0 (July 2025)', 0
-cpu_info:    db 'CPU: x86 Compatible', 0
-gpu_info:    db 'GPU: VGA Compatible', 0 
-memory_info: db 'Memory: Real Mode (< 1MB)', 0
-colors_header: db 'Available Colors:', 0
-press_key:   db 'Press any key to return...', 0
+base_memory     dw 0
+extended_memory dw 0
 
 times 512-($-$$) db 0
