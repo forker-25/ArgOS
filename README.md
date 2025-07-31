@@ -21,7 +21,7 @@ Upon startup:
 
 To build the OS:
 
-1. Use the provided `build.sh` script — it compiles everything into a single `.img` disk image.
+1. Use the provided `build.sh` script — it compiles everything into a single `.img` disk image(argument no/yes to build C code or no).
 2. The final image will be located in the `/releases/` directory.
 
 ### Requirements
