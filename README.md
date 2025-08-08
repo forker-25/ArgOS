@@ -26,7 +26,8 @@ To build the OS:
 
 ### Requirements
 
-Make sure you have **GCC**(optional), **Pythom** and **NASM** installed in your development environment before building.
+Make sure you have **GCC**(optional), **Python** and **NASM** installed in your development environment before building.
+
 
 
 
