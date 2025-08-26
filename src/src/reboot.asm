@@ -22,7 +22,6 @@ start:
     cmp al, 'Y' 
     je do_reboot
     
-    ; Если не 'y', возвращаемся
     mov si, cancel_msg
     call print
     call wait_key
