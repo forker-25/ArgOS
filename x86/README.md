@@ -9,8 +9,8 @@ chmod +x build.sh
 
 ## Commands
 
-- `tab` — display a list of available files
-- `exmpl` — execute a specific program by filename (no `.bin` extension in prompt required)
+- `ls` — display a list of available files
+- `hello` — execute a specific program by filename (no `.bin` extension in prompt required)
 
 ## Included Programs
 
