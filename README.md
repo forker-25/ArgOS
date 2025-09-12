@@ -1,6 +1,6 @@
 # Introduction to the OS
 
-Hi, I'm Cirno (also known as Sociopatia), the creator of this operating system.  
+Hi, I'm Cirnik, the creator of this operating system.  
 This OS was developed on **July 30, 2025**.
 
 Let me introduce you to some of its features and architecture.
@@ -17,6 +17,49 @@ Upon startup:
 - entering `tab` in prompt will display a list of all available files.
 - Typing the name of a file **without** the `.bin` extension will **execute** that binary and perform the assigned action.
 
+## Screenshots (pa1gcb)
+
+<details>
+  <summary>Boot Screen</summary>
+  <img src="images/1.png" alt="Boot Screen" width="600">
+</details>
+
+<details>
+  <summary>Executing tab</summary>
+  <img src="images/tab.png" alt="Executing tab" width="600">
+</details>
+
+<details>
+  <summary>Executing ascii.bin</summary>
+  <img src="images/ascii.png" alt="Executing ascii.bin" width="600">
+</details>
+
+<details>
+  <summary>Executing cpuid.bin</summary>
+  <img src="images/cpuid.png" alt="Executing cpuid.bin" width="600">
+</details>
+
+<details>
+  <summary>Executing credits.bin</summary>
+  <img src="images/credits.png" alt="Executing credits.bin" width="600">
+</details>
+
+<details>
+  <summary>Executing memory.bin</summary>
+  <img src="images/memory.png" alt="Executing memory.bin" width="600">
+</details>
+
+<details>
+  <summary>Executing ramdump.bin</summary>
+  <img src="images/ramdump.png" alt="Executing ramdump.bin" width="600">
+</details>
+
+<details>
+  <summary>Executing system info</summary>
+  <img src="images/sysinfo.png" alt="Executing system info" width="600">
+</details>
+
+
 ## Building the OS
 
 To build the OS:
@@ -27,6 +70,14 @@ To build the OS:
 ### Requirements
 
 Make sure you have **GCC**(optional), **Python** and **NASM** installed in your development environment before building.
+
+## Support Me
+
+If you like my work, you can support me so that OS updates come faster :3
+
+Via BTC: `bc1qfsepqwl9pqqfz3kzc3x9pt9qrhdrq7un2m3ydy`
+
+
 
 
 
