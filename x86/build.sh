@@ -5,7 +5,7 @@ COMPILE_C=${1:-"yes"}
 echo "Building NaOS..."
 mkdir -p releases
 echo "Compiling bootloader..."
-nasm -f bin src/boot_compact.asm -o releases/boot.bin
+nasm -f bin src/boot.asm -o releases/boot.bin
 if [ $? -ne 0 ]; then
     echo "Error building boot.bin"
     exit 1
