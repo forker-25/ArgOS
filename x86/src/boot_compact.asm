@@ -24,13 +24,11 @@ main:
     cmp byte [buf], 0
     je main
     
-    cmp byte [buf], 't'
+    cmp byte [buf], 'l'
     jne .not_tab
-    cmp byte [buf+1], 'a'
+    cmp byte [buf+1], 's'
     jne .not_tab
-    cmp byte [buf+2], 'b'
-    jne .not_tab
-    cmp byte [buf+3], 0
+    cmp byte [buf+2], 0
     je list_files
     
 .not_tab:
