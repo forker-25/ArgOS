@@ -17,6 +17,19 @@ Upon startup:
 - entering `tab` in prompt will display a list of all available files.
 - Typing the name of a file **without** the `.bin` extension will **execute** that binary and perform the assigned action.
 
+### Screenshots
+
+Here are some screenshots of the OS in action:
+
+**Boot prompt:**
+![Boot Screen](images/1.png)
+![Executing tab](images/tab.png)
+![Executing ascii.bin](images/ascii.png)
+![Executing cpuid.bin](images/cpuid.png)
+![Executing credits.bin](images/credits.png)
+![Executing memory.bin](images/memory.png)
+![Executing ramdump.bin](images/ramdump.png)
+![Executing .bin](images/sysinfo.png)
 ## Building the OS
 
 To build the OS:
@@ -33,3 +46,4 @@ Make sure you have **GCC**(optional), **Python** and **NASM** installed in your 
 If you like my work, you can support me so that OS updates come faster :3
 
 Via BTC: `bc1qfsepqwl9pqqfz3kzc3x9pt9qrhdrq7un2m3ydy`
+
