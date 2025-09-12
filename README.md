@@ -1,6 +1,6 @@
 # Introduction to the OS
 
-Hi, I'm Cirno (also known as Sociopatia), the creator of this operating system.  
+Hi, I'm Cirnik, the creator of this operating system.  
 This OS was developed on **July 30, 2025**.
 
 Let me introduce you to some of its features and architecture.
@@ -28,6 +28,9 @@ To build the OS:
 
 Make sure you have **GCC**(optional), **Python** and **NASM** installed in your development environment before building.
 
+## Support Me
 
+If you like my work, you can support me so that OS updates come faster :3
 
+[Donate via Bitcoin](bitcoin:bc1qfsepqwl9pqqfz3kzc3x9pt9qrhdrq7un2m3ydy?message=You%20can%20support%20me%20so%20that%20OS%20updates%20come%20faster%20%3A3)
 
