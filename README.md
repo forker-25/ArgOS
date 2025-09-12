@@ -32,5 +32,4 @@ Make sure you have **GCC**(optional), **Python** and **NASM** installed in your 
 
 If you like my work, you can support me so that OS updates come faster :3
 
-[Donate via Bitcoin](bitcoin:bc1qfsepqwl9pqqfz3kzc3x9pt9qrhdrq7un2m3ydy?message=You%20can%20support%20me%20so%20that%20OS%20updates%20come%20faster%20%3A3)
-
+Via BTC: `bc1qfsepqwl9pqqfz3kzc3x9pt9qrhdrq7un2m3ydy`
