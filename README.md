@@ -21,15 +21,46 @@ Upon startup:
 
 Here are some screenshots of the OS in action:
 
-**Boot prompt:**
-![Boot Screen](images/1.png)
-![Executing tab](images/tab.png)
-![Executing ascii.bin](images/ascii.png)
-![Executing cpuid.bin](images/cpuid.png)
-![Executing credits.bin](images/credits.png)
-![Executing memory.bin](images/memory.png)
-![Executing ramdump.bin](images/ramdump.png)
-![Executing .bin](images/sysinfo.png)
+<details>
+  <summary>Boot Screen</summary>
+  ![Boot Screen](images/1.png)
+</details>
+
+<details>
+  <summary>Executing `tab`</summary>
+  ![Executing tab](images/tab.png)
+</details>
+
+<details>
+  <summary>Executing `ascii.bin`</summary>
+  ![Executing ascii.bin](images/ascii.png)
+</details>
+
+<details>
+  <summary>Executing `cpuid.bin`</summary>
+  ![Executing cpuid.bin](images/cpuid.png)
+</details>
+
+<details>
+  <summary>Executing `credits.bin`</summary>
+  ![Executing credits.bin](images/credits.png)
+</details>
+
+<details>
+  <summary>Executing `memory.bin`</summary>
+  ![Executing memory.bin](images/memory.png)
+</details>
+
+<details>
+  <summary>Executing `ramdump.bin`</summary>
+  ![Executing ramdump.bin](images/ramdump.png)
+</details>
+
+<details>
+  <summary>Executing system info</summary>
+  ![Executing .bin](images/sysinfo.png)
+</details>
+
 ## Building the OS
 
 To build the OS:
@@ -46,4 +77,5 @@ Make sure you have **GCC**(optional), **Python** and **NASM** installed in your 
 If you like my work, you can support me so that OS updates come faster :3
 
 Via BTC: `bc1qfsepqwl9pqqfz3kzc3x9pt9qrhdrq7un2m3ydy`
+
 
