@@ -45,11 +45,6 @@ Upon startup:
 </details>
 
 <details>
-  <summary>Executing memory.bin</summary>
-  <img src="images/memory.png" alt="Executing memory.bin" width="600">
-</details>
-
-<details>
   <summary>Executing ramdump.bin</summary>
   <img src="images/ramdump.png" alt="Executing ramdump.bin" width="600">
 </details>
@@ -76,6 +71,7 @@ Make sure you have **GCC**(optional), **Python** and **NASM** installed in your 
 If you like my work, you can support me so that OS updates come faster :3
 
 Via BTC: `bc1qfsepqwl9pqqfz3kzc3x9pt9qrhdrq7un2m3ydy`
+
 
 
 
