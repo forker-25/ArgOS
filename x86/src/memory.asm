@@ -93,7 +93,7 @@ print_string:
 .done:
     ret
 
-title:              db 'NaOS Memory Information', 13, 10, 13, 10, 0
+title:              db 'Memory Information', 13, 10, 13, 10, 0
 base_mem_label:     db 'Base Memory: ', 0
 ext_mem_label:      db 'Extended Memory: ', 0
 kb_suffix:          db ' KB', 13, 10, 0
