@@ -20,7 +20,6 @@ chmod +x build.sh
 - `memory` — memory info and usage display  
 - `ascii` — ASCII character table  
 - `cpuid` — processor feature detection  
-- `random` — random number generator  
 - `reboot` — system reboot  
 - `credits` — author and OS information  
 - `ramdump` — physical memory dump  
