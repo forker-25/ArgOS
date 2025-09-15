@@ -23,4 +23,4 @@ wait_key:
     int 0x16
     ret
 
-hello_msg db 'Hello from NaOS program!', 0x0d, 0x0a, 'Press any key to return...', 0x0d, 0x0a, 0
+hello_msg db 'Hello world!', 0x0d, 0x0a, 'Press any key to return...', 0x0d, 0x0a, 0
