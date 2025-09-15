@@ -18,7 +18,6 @@ nasm -f bin src/colors.asm -o releases/colors.bin
 nasm -f bin src/memory.asm -o releases/memory.bin
 nasm -f bin src/ascii.asm -o releases/ascii.bin
 nasm -f bin src/cpuid.asm -o releases/cpuid.bin
-nasm -f bin src/random.asm -o releases/random.bin
 nasm -f bin src/reboot.asm -o releases/reboot.bin
 nasm -f bin src/credits.asm -o releases/credits.bin
 nasm -f bin src/ramdump.asm -o releases/ramdump.bin
@@ -35,9 +34,9 @@ fi
 
 echo "Creating disk image..."
 if [ "$COMPILE_C" = "yes" ]; then
-    python3 src/create.py releases/boot.bin releases/naos.img releases/hello.bin releases/sysinfo.bin releases/colors.bin releases/memory.bin releases/ascii.bin releases/cpuid.bin releases/random.bin releases/reboot.bin releases/credits.bin releases/ramdump.bin $CRASH_PROGRAM
+    python3 src/create.py releases/boot.bin releases/naos.img releases/hello.bin releases/sysinfo.bin releases/colors.bin releases/memory.bin releases/ascii.bin releases/cpuid.bin releases/reboot.bin releases/credits.bin releases/ramdump.bin $CRASH_PROGRAM
 else
-    python3 src/create.py releases/boot.bin releases/naos.img releases/hello.bin releases/sysinfo.bin releases/colors.bin releases/memory.bin releases/ascii.bin releases/cpuid.bin releases/random.bin releases/reboot.bin releases/credits.bin releases/ramdump.bin
+    python3 src/create.py releases/boot.bin releases/naos.img releases/hello.bin releases/sysinfo.bin releases/colors.bin releases/memory.bin releases/ascii.bin releases/cpuid.bin releases/reboot.bin releases/credits.bin releases/ramdump.bin
 fi
 
 if [ $? -eq 0 ]; then
