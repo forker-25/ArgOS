@@ -124,7 +124,7 @@ show_colors:
     loop .loopc
     ret
 
-logo          db 'NaOS Boot',0
+logo          db 'ArgOS Boot',0
 os_info       db 'FS: Cirno Fumo File System',0
 version_info  db 'Version: 1.0 (July 2025)',0
 vendor_str    db 'CPU Vendor: ',0
