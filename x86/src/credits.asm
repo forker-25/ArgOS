@@ -25,7 +25,7 @@ print:
     ret
 
 credits_text:
-    db 'Author: Cirnik(sociophatia)', 13, 10
+    db 'Author: Cirnik', 13, 10
     db 'Version: prealpha-1.0', 13, 10, 13, 10, 0
 
 return_msg:
