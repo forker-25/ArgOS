@@ -103,7 +103,7 @@ newline:
     int 0x10
     ret
 
-title:               db 'NaOS Color Palette Demo', 13, 10, 13, 10, 0
+title:               db 'Color Palette', 13, 10, 13, 10, 0
 text_colors_header:  db 'Text Colors (0-15):', 13, 10, 0
 bg_colors_header:    db 'Background Colors (0-7):', 13, 10, 0
 press_key:          db 13, 10, 'Press any key to return...', 0
