@@ -62,7 +62,7 @@ wait_key:
     int 0x16
     ret
 
-title_msg: db 'NaOS System Reboot', 13, 10, 13, 10, 0
+title_msg: db 'System Reboot', 13, 10, 13, 10, 0
 warning_msg: db 'This will restart the system immediately!', 13, 10, 0
 confirm_msg: db 'Press Y to reboot, any other key to cancel: ', 0
 cancel_msg: db 13, 10, 'Reboot cancelled.', 13, 10, 'Press any key...', 0
