@@ -119,7 +119,7 @@ newline:
     int 0x10
     ret
 
-title:      db 'NaOS ASCII Table (32-126)', 13, 10, 13, 10, 0
+title:      db 'ASCII Table (32-126)', 13, 10, 13, 10, 0
 press_key:  db 13, 10, 'Press any key to return...', 0
 
 times 512-($-$$) db 0
