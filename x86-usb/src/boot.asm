@@ -14,7 +14,7 @@ start:
     mov bx, 0x8000
     call read_sector
 
-    mov si, msg
+    mov si, m
     call print
 
 main:
@@ -62,7 +62,7 @@ find_file:
     test ax, ax
     jnz .run
 
-    mov si, not_found_msg
+    mov si, nfm
     call print
     ret
 
@@ -115,7 +115,7 @@ add_bin_ext:
     mov di, buf
     add di, ax
     sub di, 4
-    mov si, bin_ext
+    mov si, binex
     call strcmp
     test ax, ax
     jnz .done
@@ -164,25 +164,23 @@ strcmp:
     ret
 
 read_sector:
+    mov [dap+8], ax
+    mov word [dap+10], 0
+    mov dword [dap+12], 0
     pusha
     mov si, dap
-    mov byte [si], 0x10
-    mov byte [si+1], 0
-    mov [si+2], cx
-    mov word [si+4], bx
+    mov byte [si], 0x10 
+    mov byte [si+1], 0  
+    mov word [si+2], cx     
+    mov word [si+4], bx    
     mov word [si+6], 0
-    mov dx, ax
-    dec dx
-    mov word [si+8], dx
-    mov word [si+10], 0
-    mov word [si+12], 0
-    mov word [si+14], 0
     mov ah, 0x42
     mov dl, [boot_drive]
     int 0x13
     jc error
     popa
     ret
+
 
 input:
     mov di, buf
@@ -246,17 +244,17 @@ newline:
     ret
 
 error:
-    mov si, error_msg
+    mov si, em
     call print
     cli
     hlt
 
-msg:            db 'Welcome!', 13, 10, 0
+m:            db 'Hi!', 13, 10, 0
 prompt:         db '> ', 0
 files_msg:      db 'Files:', 13, 10, 0
-not_found_msg:  db 'Not found!', 13, 10, 0
-error_msg:      db 'Error!', 13, 10, 0
-bin_ext:        db '.bin', 0
+nfm:  db 'Not found!', 13, 10, 0
+em:      db 'Err!', 13, 10, 0
+binex:        db '.bin', 0
 
 boot_drive:     db 0
 dap:            times 16 db 0
