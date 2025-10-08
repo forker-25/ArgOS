@@ -54,6 +54,17 @@ Upon startup:
   <img src="images/sysinfo.png" alt="Executing system info" width="600">
 </details>
 
+## Screenshots (x86-usb-1-pre-alpha)
+
+<details>
+  <summary>Executing ls</summary>
+  <img src="images/lsusb.jpg" alt="Executing ls in x86-usb" width="600">
+</details>
+
+<details>
+  <summary>Executing devs</summary>
+  <img src="images/devs.jpg" alt="Executing devs in x86-usb" width="600">
+</details>
 
 ## Building the OS
 
@@ -71,6 +82,7 @@ Make sure you have **GCC**(optional), **Python** and **NASM** installed in your 
 If you like my work, you can support me so that OS updates come faster :3
 
 Via BTC: `bc1qfsepqwl9pqqfz3kzc3x9pt9qrhdrq7un2m3ydy`
+
 
 
 
